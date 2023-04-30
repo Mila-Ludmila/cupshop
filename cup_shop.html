@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./cup_shop.css">
+	<link rel="stylesheet" type="text/css" href="./cup_add.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
+	<style type="text/css"></style>
+	<title>CUP SHOP</title>
+</head>
+
+<body> 
+	<div class="modaltrash">
+		<div id = "counter"></div>
+	</div>
+</div> 
+
+	<header class="header">
+		<div class="logo">
+			<img src="./img/log.jpg" alt="logo">
+		</div>
+
+		<div class="right">
+			<div id="countH3">
+				<h3 id="h3Trash" class="h3Trash">0</h3>
+			</div>
+			<div class="basket grey">
+				<a href="#openModal"><img src="./img/bs.png" alt="Basket"></a>
+				<div id="openModal" class="modalDialog bascket-buy order">
+					<div id="hgfl">
+						<a href="#close" title="close" class="close">X</a>
+						<form class="modal-basket">
+							<div class="basket-content">
+								<h5>КОШИК</h5>
+								<div id="cont"></div>
+								<div id="count"></div>
+								<p id="cost">Товарів на суму 0 грн.</p>
+								<input id="contInput" type="button" name="basketBye" value="Замовити">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="client">
+				<a href="#openModalPerson">
+					<img src="./img/unuser.png" alt="Person" class="personimg" id="profImg">
+				</a> 
+				<div id="openModalPerson" class="modalDialog autorization">
+					<div>
+						<a href="#close" title="close" class="close">X</a>
+						<form class="modal-autoriz" name="autoriz">
+							<div class="autoriz">
+								<h2>AUTORIZATION</h2>
+
+								<p><b>Your name</b></p>
+								<input class="autoriz-input mug" id="userName" type="text" name="name" required="required"
+									placeholder="Your name" size="40" required>
+								<p class="paragraph" name="pName">Мінімум 3 символи</p>
+
+								<p><b>Your Surname</b></p>
+								<input class="autoriz-input mug" id="userSurname" type="text" name="surname" required="required"
+									placeholder="Your Surname" size="40" required>
+								<p class="paragraph" name="pSurname">Мінімум 3 символи</p>
+
+								<p><b>Your Email</b></p>
+								<input class="autoriz-input mug klick" id="userEmail" type="email" name="email"
+									required="required" placeholder="Your Email: userName@mail.com" size="40" required>
+								<p class="paragraph" name="pEmail">Формат: E-mail@domain.com</p>
+
+								<p><b>Your Password</b></p>
+								<input class="autoriz-input mug" id="userPassword" type="password" name="pass"
+									autocomplete="current-password" placeholder="Your Password" size="40" required>
+								<p class="paragraph" name="pPass">Латинскі літери та цифри, min одна цифра, min одна
+									велика літера, min 6 символів</p>
+
+								<button class="submit mug" id="identif" type="" value="AUTORIZATION"> TO AUTORIZE</button>
+								<p>IF YOU ARE A NEW USER,
+									<br><br>
+									<a href="#openModal-regest" class="aClick">TO REGISTER</a>
+								</p>
+							</div>
+							<br>
+						</form>
+					</div>
+				</div>
+
+				<div id="openModal-regest" class="modalDialog-regest">
+					<div>
+						<a href="#close" title="close" class="close">X</a> 
+						<form class="modal-regest" name="regest">
+							<div id="registration" class="registration">
+								<h2>TO REGISTER</h2>
+								<div id="main">
+									<img id="output" class="personimg" src="./img/noimages1.png" alt="noimages">
+									<input type="file" id="fr" accept="image/*">
+
+								</div>
+								<p><b>Your name</b></p>
+								<input class="autoriz-input data" type="text" name="myname" required="required"
+									placeholder="Your name" size="40" required>
+								<p class="paragraph" name="pMyname">Мінімум 3 символи</p>
+
+								<p><b>Your Surname</b></p>
+								<input class="autoriz-input data" type="text" name="mysurname" required="required"
+									placeholder="Your Surname" size="40" required>
+								<p class="paragraph" name="pMysurname">Мінімум 3 символи</p>
+
+								<p><b>Your Email</b></p>
+								<input class="autoriz-input data send" id="userEmail" type="email" name="myemail"
+									required="required" placeholder="Your Email: E-mail@domain.com" size="40" required>
+								<p class="paragraph" name="pMyemail">Формат: E-mail@domain.com</p>
+
+								<p><b>Your Password</b></p>
+								<input class="autoriz-input data" id="userPassword" type="password" name="mypass"
+									autocomplete="current-password" placeholder="Your Password" size="40" required>
+								<p class="paragraph" name="pMypass">Латинскі літери та цифри, min одна цифра, min одна
+									велика літера, min 6 символів</p>
+
+								<p><b>Your phone number:</b></p>
+								<input class="autoriz-input data" type="tel" id="phone" name="myphone"
+									placeholder="Телефон" maxlength="20" size="40" required>
+								<p class="paragraph" name="pMytel">Формат: (050)000-00-00, 0501234567 або 050 123 45 67
+								</p>
+
+								<textarea name="myinfo" maxlength="1000" cols="20" rows="5" placeholder="Про себе"
+									class="textbox data" required></textarea>
+								<p class="paragraph" name="pMyinfo">Мінімум 20 символів</p>
+								<div class="button-parent">
+									<div class="button-item">
+										<a href="#submits data" title="submits data" class="submits data" id="butreg">TO REGISTER</a>
+										<!--<button class="submit data" id="butreg" type="button" value="Submit">TO REGISTER</button>--> 
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+	<main>
+		<div id="cup" class="cup-wrap">
+			<div class="hover" id="hover" >
+					<div class="shell">
+						<div class="position card" onmouseover="change2()" onmouseout="change1()">
+							<img src="./img/1.jpg" alt="cup" id="cup1">
+							<div class="child">
+								<h3>Чашка для кави "Маки" маленька</h3>
+								<h3>Об'єм: 120 мл</h3>
+								<h3>Бренд: Народний дім Україна</h3>
+								<span class="span">
+									Ціна:
+									<h3 class="mach"> 140 грн.</h3>
+								</span>
+								<a class="buy" href="#" id="aBuy">КУПИТИ</a>
+							</div>
+						</div>
+					</div>
+					<div class="shell">
+						<div class="position card" onmouseover="change22()" onmouseout="change21()">
+							<img src="./img/2.jpg" alt="cup" id="cup2">
+							<div class="child">
+								<h3>Чашка з подвійним дном та блюдцем Lessner Thermo</h3>
+								<h3>Об'єм: 150 мл</h3>
+								<h3>Країна-виробник: Китай</h3>
+								<span class="span">
+									Ціна:
+									<h3 class="mach"> 270 грн.</h3>
+								</span>
+								<a class="buy" href="#" id="aBuy">КУПИТИ</a>
+							</div>
+						</div>
+					</div>
+					<div class="shell">
+						<div class="position card" onmouseover="change32()" onmouseout="change31()">
+							<img src="./img/3.jpg" alt="cup" id="cup3">
+							<div class="child">
+								<h3>Чашка чайна Porland Seasons Turquoise</h3>
+								<h3>Об'єм: 200 мл</h3>
+								<h3>Країна-виробник: Туреччина</h3>
+								<span class="span">
+									Ціна:
+									<h3 class="mach"> 450 грн.</h3>
+								</span>
+								<a class="buy" href="#" id="aBuy">КУПИТИ</a>
+							</div>
+						</div>
+					</div>
+					<div class="shell">
+						<div class="position card" onmouseover="change42()" onmouseout="change41()">
+							<img src="./img/4.jpg" alt="cup" id="cup4">
+							<div class="child">
+								<h3>Чашка чайна з блюдцем</h3>
+								<h3>Об'єм: 120 мл</h3>
+								<h3>Країна-виробник: Китай</h3>
+								<span class="span">
+									Ціна:
+									<h3 class="mach"> 440 грн.</h3>
+								</span>
+								<a class="buy" href="#" id="aBuy">КУПИТИ</a>
+							</div>
+						</div>
+					</div>
+					<div class="shell">
+						<div class="position card" onmouseover="change52()" onmouseout="change51()">
+							<img src="./img/5.jpg" alt="cup" id="cup5">
+							<div class="child">
+								<h3>Чашка чайна з обідком та блюдцем</h3>
+								<h3>Об'єм: 120 мл</h3>
+								<h3>Країна-виробник: Туреччина</h3>
+								<span class="span">
+									Ціна:
+									<h3 class="mach"> 200 грн.</h3>
+								</span>
+								<a class="buy" href="#" id="aBuy">КУПИТИ</a>
+							</div>
+						</div>
+					</div>
+					<div class="shell">
+						<div class="position card" onmouseover="change62()" onmouseout="change61()">
+							<img src="./img/6.jpg" alt="cup" id="cup6">
+							<div class="child">
+								<h3>Чашка</h3>
+								<h3>Об'єм: 180 мл</h3>
+								<h3>Країна-виробник: Китай</h3>
+								<span class="span">
+									Ціна:
+									<h3 class="mach"> 90 грн.</h3>
+								</span>
+								<a class="buy" href="#" id="aBuy">КУПИТИ</a>
+							</div>
+						</div>
+					</div>
+					
+					<div id="tab1" onclick = "cupprint()"></div>
+			</div>
+			<div id="cupadded" onclick = "cupadd()">
+				<a class="added" href="#">+</a>
+			</div>
+		</div>
+		<div class="tablePerson" onload = "personStorage()"></div>
+		
+		
+	</main>
+	<footer>
+		<div>
+			<p><b>&#128604</b></p>
+		</div>
+		<div>
+			<p class="footer"> <b>CUP SHOP </b> Ⓛ</p>
+		</div>
+		<div>
+
+			<p><b>&#128606</b></p>
+		</div>
+	</footer>
+
+
+	<script src="./cup_shop.js">
+
+	</script>
+
+</body>
+
+</html>
